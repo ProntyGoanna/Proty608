@@ -10,17 +10,27 @@ if __name__ == '__main__':
 
 
 
-import sys
-import os
+import turtle
 
-print(str(sys.path))
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-print("current working dir: {dir_path}")
 
-#root_dir = dir_path.replace("/util", '', 1)
-#print("root dir: {root_dir}")
+window = turtle.Screen() # Set up the window and its attributes
+window.bgcolor("lightgreen")
+window.title("Tess & Alex")
+alex = turtle.Turtle()
+alex.color("red")
+alex.pensize(15)
 
-#sys.path.insert(0, root_dir)
-
-#print(str(sys.path))
+for _ in range(4):
+    alex.forward(250)
+    alex.left(90)
+    
+    
+for colour in ["yellow", "red", "purple", "blue"]:
+    alex.color(colour)
+    alex.forward(50)
+    alex.left(90)
+    alex.speed(2)
+    alex.shape("turtle")
+    
+window.mainloop()
